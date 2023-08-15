@@ -16,6 +16,7 @@ services:
       - 'traefik.enable=true'
       - 'traefik.http.routers.homepage.rule=Path(`/`) || Path(`/robots.txt`)'
       - 'traefik.http.routers.homepage.tls'
+      - 'traefik.http.routers.homepagenotls.rule=Path(`/`) || Path(`/robots.txt`)'
 networks:
     pi:
       external: true
