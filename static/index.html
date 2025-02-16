@@ -11,9 +11,15 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: url('https://source.unsplash.com/daily') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(45deg, #a0d2eb, #e5eaf5, #d0bdf4, #8458B3, #a28089);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: #333;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         header, .container {
             max-width: 800px;
@@ -50,7 +56,18 @@
         .service p {
             margin: 5px 0;
         }
+        .clipboard-icon {
+            cursor: pointer;
+            margin-left: 10px;
+        }
     </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Password copied to clipboard');
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -67,7 +84,10 @@
                 <h3><a href="/sharebox">Sharebox</a></h3>
                 <p>File sharing to allow people downloading data from server (movies, series, everything).</p>
                 <p><strong>Username:</strong> sharebox</p>
-                <p><strong>Password:</strong> ShareboxÉMILIEN2023</p>
+                <p>
+                    <strong>Password:</strong> ShareboxÉMILIEN2023
+                    <span class="clipboard-icon" onclick="copyToClipboard('ShareboxÉMILIEN2023')">📋</span>
+                </p>
             </div>
             <div class="service">
                 <h3><a href="/me">Me</a></h3>
@@ -107,6 +127,11 @@
             <div class="service">
                 <h3><a href="/admin">Pihole</a></h3>
                 <p>A dashboard to ensure all DNS requests from ad services are blocked and do not mess up the bandwidth.</p>
+            </div>
+            <div class="service">
+                <h3>Ports</h3>
+                <p><strong>SSH Port:</strong> 22</p>
+                <p><strong>Mosh Port:</strong> 60001</p>
             </div>
         </section>
     </div>
