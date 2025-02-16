@@ -17,9 +17,9 @@ services:
       - 'traefik.http.routers.homepage.rule=Path(`/`)
       - 'traefik.http.routers.homepage.tls'
       - 'traefik.http.routers.homepagenotls.rule=Path(`/`)
-  - "traefik.http.middlewares.homepage-headers.headers.customResponseHeaders.X-Robots-Tag=noindex"
+      - "traefik.http.middlewares.homepage-headers.headers.customResponseHeaders.X-Robots-Tag=noindex"
       - "traefik.http.routers.homepage.middlewares=homepage-headers"
-    - "traefik.http.routers.homepagenotls.middlewares=homepage-headers"
+      - "traefik.http.routers.homepagenotls.middlewares=homepage-headers"
 networks:
     pi:
       external: true
