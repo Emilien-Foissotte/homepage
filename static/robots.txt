@@ -1,6 +1,2 @@
-# Block all crawlers and AdsBot (AdsBot crawlers must be named explicitly)
-User-agent: *
-User-agent: AdsBot-Google
-Disallow: /
 
 
