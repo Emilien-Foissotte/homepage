@@ -1,167 +1,137 @@
-<!DOCTYPE html> <html lang="en"> <head> 
-    <meta charset="UTF-8"> <meta 
-    name="viewport" 
-    content="width=device-width, 
-    initial-scale=1.0"> <title>Émilien's 
-    Homepage</title> <link 
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" 
-    rel="stylesheet"> <style>
-        body { font-family: 'Roboto', 
-            sans-serif; line-height: 
-            1.6; margin: 0; padding: 0; 
-            background-color: #e1b382; 
-            /* Sand Tan */ color: #333;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Émilien's Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e1b382; /* Sand Tan */
+            color: #333;
         }
-        header, .container { max-width: 
-            800px; margin: 0 auto; 
-            padding: 20px; background: 
-            #c89666; /* Sand Tan Shadow 
-            */ border-radius: 10px; 
-            box-shadow: 0 0 10px rgba(0, 
-            0, 0, 0.1);
+        header, .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #c89666; /* Sand Tan Shadow */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        header { background: #12343b; /* 
-            Night Blue Shadow */ color: 
-            #fff;
-            padding: 10px 0; text-align: 
-            center; border-radius: 10px 
-            10px 0 0;
+        header {
+            background: #12343b; /* Night Blue Shadow */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
         }
-        h1 { color: #e1b382; /* Sand Tan 
-            */
+        h1 {
+            color: #e1b382; /* Sand Tan */
         }
-        h2 { color: #12343b; /* Night 
-            Blue Shadow */
+        h2 {
+            color: #12343b; /* Night Blue Shadow */
         }
-        a { color: #2d545e; /* Night 
-            Blue */ text-decoration: 
-            none;
+        a {
+            color: #2d545e; /* Night Blue */
+            text-decoration: none;
         }
-        a:hover { text-decoration: 
-            underline;
+        a:hover {
+            text-decoration: underline;
         }
-        .service { background: #c89666; 
-            /* Sand Tan Shadow */ 
-            margin: 10px 0; padding: 
-            10px; border-radius: 5px; 
-            box-shadow: 0 0 10px rgba(0, 
-            0, 0, 0.1);
+        .service {
+            background: #c89666; /* Sand Tan Shadow */
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .service p { margin: 5px 0;
+        .service p {
+            margin: 5px 0;
         }
-        .clipboard-icon { cursor: 
-            pointer; margin-left: 10px;
+        .clipboard-icon {
+            cursor: pointer;
+            margin-left: 10px;
         }
-    </style> <script> function 
-        copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() 
-            => {
-                alert('Password copied 
-                to clipboard');
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Password copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
             });
         }
-    </script> </head> <body> <header> 
+    </script>
+</head>
+<body>
+    <header>
         <h1>Émilien's Homepage</h1>
-    </header> <div class="container"> 
+    </header>
+    <div class="container">
         <section>
-            <h2>A few words</h2> 
-            <p>Welcome to my digital 
-            homeplace. You will find 
-            some links shortcuts to my 
-            digital services.</p>
-        </section> <section> <h2>Shared 
-            services</h2> <div 
-            class="service">
-                <h3><a 
-                href="/sharebox">Sharebox</a></h3> 
-                <p>File sharing to allow 
-                people downloading data 
-                from server (movies, 
-                series, everything).</p> 
-                <p><strong>Username:</strong> 
-                sharebox</p> <p>
-                    <strong>Password:</strong> 
-                    ShareboxÉMILIEN2023 
-                    <span 
-                    class="clipboard-icon" 
-                    onclick="copyToClipboard('ShareboxÉMILIEN2023')">📋</span>
-                </p> </div> <div 
-            class="service">
-                <h3><a 
-                href="/me">Me</a></h3> 
-                <p>Redirect to my 
-                personal homepage hosted 
-                on GitHub Pages.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/plex">Plex</a></h3> 
-                <p>Plex Web Server to 
-                host and stream movies 
-                and series.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/nextcloud">Nextcloud</a></h3> 
-                <p>To host files, 
-                photos, calendar, and a 
-                lot of other stuff on a 
-                self-hosted server.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/freshrss/">FreshRSS</a></h3> 
-                <p>An RSS feed 
-                aggregator to never miss 
-                a fun and cool blog post 
-                from favorite 
-                bloggers.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/whoami">Whoami</a></h3> 
-                <p>A whoami service to 
-                display all incoming 
-                requests and for 
-                debugging purposes.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/speedtest/">Speedtest</a></h3> 
-                <p>A speedtest webpage 
-                to ensure that the 
-                bandwidth and network 
-                speed is always at its 
-                maximum.</p>
-            </div> </section> <section> 
-            <h2>Administration of my 
-            server</h2> <div 
-            class="service">
-                <h3><a 
-                href="/grafana">Grafana</a></h3> 
-                <p>A dashboard sending 
-                all data from Raspberry 
-                Pi and docker services 
-                to ensure nothing is 
-                skyrocketing the RAM or 
-                CPU on the server.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/dashboard/">Traefik 
-                Dashboard</a></h3> 
-                <p>Traefik dashboard to 
-                ensure everything is 
-                well served, with the 
-                right middlewares.</p>
-            </div> <div class="service"> 
-                <h3><a 
-                href="/admin">Pihole</a></h3> 
-                <p>A dashboard to ensure 
-                all DNS requests from ad 
-                services are blocked and 
-                do not mess up the 
-                bandwidth.</p>
-            </div> <div class="service"> 
-                <h3>Ports</h3> 
-                <p><strong>SSH 
-                Port:</strong> 22</p> 
-                <p><strong>Mosh 
-                Port:</strong> 60001</p>
-            </div> </section> </div> 
+            <h2>A few words</h2>
+            <p>Welcome to my digital homeplace. You will find some links shortcuts to my digital services.</p>
+        </section>
+        <section>
+            <h2>Shared services</h2>
+            <div class="service">
+                <h3><a href="/sharebox">Sharebox</a></h3>
+                <p>File sharing to allow people downloading data from server (movies, series, everything).</p>
+                <p><strong>Username:</strong> sharebox</p>
+                <p>
+                    <strong>Password:</strong> ShareboxÉMILIEN2023
+                    <span class="clipboard-icon" onclick="copyToClipboard('ShareboxÉMILIEN2023')">📋</span>
+                </p>
+            </div>
+            <div class="service">
+                <h3><a href="/me">Me</a></h3>
+                <p>Redirect to my personal homepage hosted on GitHub Pages.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/plex">Plex</a></h3>
+                <p>Plex Web Server to host and stream movies and series.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/nextcloud">Nextcloud</a></h3>
+                <p>To host files, photos, calendar, and a lot of other stuff on a self-hosted server.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/freshrss/">FreshRSS</a></h3>
+                <p>An RSS feed aggregator to never miss a fun and cool blog post from favorite bloggers.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/whoami">Whoami</a></h3>
+                <p>A whoami service to display all incoming requests and for debugging purposes.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/speedtest/">Speedtest</a></h3>
+                <p>A speedtest webpage to ensure that the bandwidth and network speed is always at its maximum.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Administration of my server</h2>
+            <div class="service">
+                <h3><a href="/grafana">Grafana</a></h3>
+                <p>A dashboard sending all data from Raspberry Pi and docker services to ensure nothing is skyrocketing the RAM or CPU on the server.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/dashboard/">Traefik Dashboard</a></h3>
+                <p>Traefik dashboard to ensure everything is well served, with the right middlewares.</p>
+            </div>
+            <div class="service">
+                <h3><a href="/admin">Pihole</a></h3>
+                <p>A dashboard to ensure all DNS requests from ad services are blocked and do not mess up the bandwidth.</p>
+            </div>
+            <div class="service">
+                <h3>Ports</h3>
+                <p><strong>SSH Port:</strong> 22</p>
+                <p><strong>Mosh Port:</strong> 60001</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
