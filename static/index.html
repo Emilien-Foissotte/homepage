@@ -11,36 +11,43 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #e5eaf5; /* Freeze Purple */
+            background: linear-gradient(45deg, #a0d2eb, #e5eaf5, #d0bdf4, #8458B3, #a28089);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: #333;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         header, .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background: #a0d2eb; /* Ice Cold */
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         header {
-            background: #8458B3; /* Purple Pain */
+            background: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
             border-radius: 10px 10px 0 0;
         }
         h1, h2 {
-            color: #8458B3; /* Purple Pain */
+            color: #333;
         }
         a {
-            color: #a28089; /* Heavy Purple */
+            color: #0066cc;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .service {
-            background: #d0bdf4; /* Medium Purple */
+            background: #fff;
             margin: 10px 0;
             padding: 10px;
             border-radius: 5px;
